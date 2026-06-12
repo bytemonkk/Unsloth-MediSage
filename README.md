@@ -1,11 +1,12 @@
 # Unsloth-MediSage
-### Parameter-Efficient Fine-Tuning of Llama-3-8B-Instruct for Medical Question Answering using Unsloth and LoRA
+
+### Efficient Fine-Tuning of Llama-3-8B-Instruct for Medical Question Answering using Unsloth
 
 <p align="center">
   <img src="assets/MedicalQA_Architecture.png" width="100%">
 </p>
 
-<h1 align="center">🩺 MediSage-Unsloth</h1>
+<h1 align="center">🩺 Unsloth-MediSage</h1>
 
 <h3 align="center">
 Fine-Tuning Llama-3-8B-Instruct for Medical Question Answering using Unsloth
@@ -15,29 +16,29 @@ Fine-Tuning Llama-3-8B-Instruct for Medical Question Answering using Unsloth
   <img src="https://img.shields.io/badge/Python-3.10+-blue">
   <img src="https://img.shields.io/badge/PyTorch-2.x-red">
   <img src="https://img.shields.io/badge/Llama--3--8B-Instruct-green">
-  <img src="https://img.shields.io/badge/Unsloth-Fast%20Fine--Tuning-orange">
-  <img src="https://img.shields.io/badge/LoRA-PEFT-yellow">
+  <img src="https://img.shields.io/badge/Unsloth-Efficient%20Fine--Tuning-orange">
   <img src="https://img.shields.io/badge/Task-Medical%20Question%20Answering-purple">
+  <img src="https://img.shields.io/badge/Domain-Healthcare-success">
 </p>
 
 ---
 
 # 📖 Overview
 
-**MediSage-Unsloth** is a domain-adapted Medical Question Answering (Medical QA) system developed by fine-tuning **Llama-3-8B-Instruct** on a **Medical Q&A Dataset** using **Unsloth** and **Low-Rank Adaptation (LoRA)**. The project leverages parameter-efficient fine-tuning to create a lightweight medical assistant capable of generating context-aware and instruction-following responses for healthcare-related queries.
+**Unsloth-MediSage** is a domain-specific Medical Question Answering (Medical QA) model developed by fine-tuning **Llama-3-8B-Instruct** on a **Medical Q&A Dataset** using **Unsloth**. The project focuses on adapting a general-purpose Large Language Model into a medical assistant capable of generating accurate, context-aware, and instruction-following responses for healthcare-related questions while maintaining efficient memory utilization and faster training.
 
 ---
 
-# ✨ Features
+# Features
 
-* 🩺 Medical Question Answering
-* 🦙 Fine-tuned Llama-3-8B-Instruct
-* ⚡ Fast Fine-Tuning with Unsloth
-* 🎯 Parameter-Efficient Training using LoRA
-* 📚 Instruction-Tuned Medical Dataset
-* 💾 Low GPU Memory Consumption
-* 🤖 Context-Aware Medical Responses
-* 🚀 Ready for Hugging Face Deployment
+* Medical Question Answering
+* Fine-tuned Llama-3-8B-Instruct
+* Efficient Fine-Tuning with Unsloth
+* Medical Q&A Instruction Dataset
+* Reduced Memory Consumption
+* Context-Aware Response Generation
+* Ready for Inference & Deployment
+* Foundation for Future PEFT Research
 
 ---
 
@@ -56,34 +57,30 @@ Fine-Tuning Llama-3-8B-Instruct for Medical Question Answering using Unsloth
                  Tokenization
                          │
                          ▼
-            Llama-3-8B-Instruct Model
-                    (Base LLM)
+            Llama-3-8B-Instruct
+               (Base Foundation Model)
                          │
                          ▼
-          LoRA Adapter Injection (PEFT)
+          Efficient Fine-Tuning with Unsloth
                          │
                          ▼
-           Fine-Tuning using Unsloth
-                         │
-                         ▼
-           Fine-Tuned Medical QA Model
+          Domain-Adaptive Medical LLM
                          │
                          ▼
               User Medical Question
                          │
                          ▼
-         Context-Aware Medical Response
+          Context-Aware Medical Answer
 ```
 
 ---
 
-# ⚙️ Technology Stack
+# Technology Stack
 
 * Python
 * PyTorch
 * Hugging Face Transformers
 * Unsloth
-* PEFT (LoRA)
 * TRL
 * Accelerate
 * BitsAndBytes
@@ -91,9 +88,9 @@ Fine-Tuning Llama-3-8B-Instruct for Medical Question Answering using Unsloth
 
 ---
 
-# 📂 Dataset
+# Dataset
 
-The model is trained using a **Medical Question & Answer Dataset** consisting of healthcare-related questions and expert-style answers formatted for instruction tuning.
+The model is fine-tuned on a **Medical Question & Answer Dataset** containing healthcare-related questions and corresponding expert-style answers formatted for instruction tuning.
 
 ### Example
 
@@ -112,77 +109,30 @@ chest tightness, and persistent coughing.
 
 ---
 
-# 🚀 Training Pipeline
-
-```text
-Medical Q&A Dataset
-          │
-          ▼
-Data Cleaning
-          │
-          ▼
-Instruction Formatting
-          │
-          ▼
-Tokenizer
-          │
-          ▼
-Llama-3-8B-Instruct
-          │
-          ▼
-LoRA Adapters
-          │
-          ▼
-Unsloth Fine-Tuning
-          │
-          ▼
-Fine-Tuned Medical QA Model
-```
-
----
-
-# 💡 Applications
+# Applications
 
 * Medical Question Answering
-* AI Healthcare Assistant
+* Healthcare Virtual Assistant
 * Patient Education
-* Clinical Knowledge Support
-* Healthcare Chatbots
 * Medical Information Retrieval
+* Healthcare AI Research
+* Clinical Knowledge Assistance
 
 ---
 
-# 📁 Project Structure
+# Model Efficiency
 
-```bash
-MediSage-Unsloth/
-│
-├── assets/
-│   └── MedicalQA_Architecture.png
-│
-├── dataset/
-│   └── medical_qa_dataset.csv
-│
-├── notebooks/
-│   └── training.ipynb
-│
-├── inference.py
-├── train.py
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
+One of the key advantages of using **Unsloth** is its memory-efficient optimization. While the original **Llama-3-8B-Instruct** model occupies approximately **15 GB**, the optimized **Unsloth** implementation requires only **~5.7 GB** for fine-tuning and inference, making it significantly more accessible on consumer-grade GPUs while maintaining strong task-specific performance.
 
 ---
 
-# 🔮 Future Work
+# Future Work
 
-* Retrieval-Augmented Generation (RAG)
-* Multi-turn Medical Conversations
-* Medical Report Understanding
-* Clinical Document Question Answering
-* Deployment with FastAPI & Hugging Face Spaces
+* 🔹 Integrate **LoRA (Low-Rank Adaptation)** for Parameter-Efficient Fine-Tuning (PEFT)
+* 🔹 Retrieval-Augmented Generation (RAG) for evidence-based responses
+* 🔹 Multi-turn Medical Conversations
+* 🔹 Clinical Document Question Answering
+* 🔹 FastAPI and Hugging Face Spaces Deployment
+* 🔹 Quantization and Edge Device Optimization
 
 ---
-
-# ⭐ Star this repository if you found it useful!
