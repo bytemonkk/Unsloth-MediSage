@@ -109,35 +109,6 @@ chest tightness, and persistent coughing.
 
 ---
 
-# Fine-Tuning Pipeline
-
-```text
-Medical Q&A Dataset
-          │
-          ▼
-Data Cleaning
-          │
-          ▼
-Instruction Formatting
-          │
-          ▼
-Tokenizer
-          │
-          ▼
-Llama-3-8B-Instruct
-          │
-          ▼
-Unsloth Fine-Tuning
-          │
-          ▼
-Fine-Tuned Medical QA Model
-          │
-          ▼
-Medical Question Answering
-```
-
----
-
 # Applications
 
 * Medical Question Answering
