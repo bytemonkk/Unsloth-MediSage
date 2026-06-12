@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# HuggingFace Cache
+.cache/
+huggingface/
+hf_cache/
+
+# Model Files
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Dataset
+dataset/*.csv
+dataset/*.json
+dataset/*.jsonl
+
+# Logs
+logs/
+wandb/
+runs/
+
+# Outputs
+outputs/
+results/
+checkpoints/
+saved_model/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Environment Variables
+.env
+
+# Misc
+*.log
