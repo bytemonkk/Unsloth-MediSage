@@ -44,34 +44,7 @@ Fine-Tuning Llama-3-8B-Instruct for Medical Question Answering using Unsloth
 
 # 🏗️ Model Architecture
 
-```text
-                 Medical Q&A Dataset
-                         │
-                         ▼
-          Data Cleaning & Preprocessing
-                         │
-                         ▼
-          Instruction Prompt Formatting
-                         │
-                         ▼
-                 Tokenization
-                         │
-                         ▼
-            Llama-3-8B-Instruct
-               (Base Foundation Model)
-                         │
-                         ▼
-          Efficient Fine-Tuning with Unsloth
-                         │
-                         ▼
-          Domain-Adaptive Medical LLM
-                         │
-                         ▼
-              User Medical Question
-                         │
-                         ▼
-          Context-Aware Medical Answer
-```
+
 
 ---
 
