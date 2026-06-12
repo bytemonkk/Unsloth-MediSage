@@ -44,7 +44,9 @@ Fine-Tuning Llama-3-8B-Instruct for Medical Question Answering using Unsloth
 
 # 🏗️ Model Architecture
 
-
+<p align="center">
+  <img src="assets/unsloth_Arch.png" width="100%">
+</p>
 
 ---
 
